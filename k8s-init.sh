@@ -1,4 +1,4 @@
-1. ## Install and configure containerd ##
+## Install and configure containerd ##
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
 br_netfilter
@@ -17,7 +17,7 @@ EOF
 # Apply sysctl params without reboot
 sudo sysctl --system
 
-2. ## install containerd from docker repository ##
+## install containerd from docker repository ##
 sudo yum install -y yum-utils
 
 sudo yum-config-manager \
