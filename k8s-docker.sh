@@ -1,5 +1,5 @@
 # Install packages & upgrade, comment out if you don't want to run them
-sudo yum install vim wget nmap-ncat epel-release -y
+sudo yum install vim wget nmap-ncat epel-release jq -y
 sudo yum update -y
 
 # Install docker
