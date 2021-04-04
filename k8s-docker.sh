@@ -1,3 +1,7 @@
+# Install packages & upgrade, comment out if you don't want to run them
+sudo yum install vim wget nmap-ncat epel-release -y
+sudo yum update -y
+
 # Install docker
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -17,9 +21,6 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 EOF
 
 sudo systemctl daemon-reload
-sudo sleep 10
 sudo systemctl enable docker
-sudo sleep 10
 sudo systemctl restart docker
-sudo sleep 10
 sudo systemctl status docker
