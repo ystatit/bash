@@ -1,7 +1,3 @@
-# Install packages & upgrade, comment out if you don't want to run them
-sudo yum install vim wget nmap-ncat epel-release -y
-sudo yum update -y
-
 # Letting iptables see bridged traffic
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 br_netfilter
