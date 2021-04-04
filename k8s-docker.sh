@@ -16,7 +16,10 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 }
 EOF
 
-sudo systemctl enable docker
 sudo systemctl daemon-reload
+sudo sleep 10
+sudo systemctl enable docker
+sudo sleep 10
 sudo systemctl restart docker
+sudo sleep 10
 sudo systemctl status docker
