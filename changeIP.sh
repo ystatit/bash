@@ -2,8 +2,8 @@
 systemctl stop kubelet docker
 
 # Backup Kubernetes and kubelet
-mv /etc/kubernetes /etc/kubernetes-backup
-mv /var/lib/kubelet /var/lib/kubelet-backup
+mv -f /etc/kubernetes /etc/kubernetes-backup
+mv -f /var/lib/kubelet /var/lib/kubelet-backup
 
 # Keep the certs we need
 mkdir -p /etc/kubernetes
